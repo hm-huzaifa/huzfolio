@@ -12,8 +12,8 @@ const Header = () => {
         <h5>Hello I'm</h5>
         <h1>Muhammad Huzaifa</h1>
         <h5 className="text-light">Full Stack Developer</h5>
-        <CTA/>
-        <HeaderSocials/>
+        <CTA />
+        <HeaderSocials />
 
 
         <div className="me">
@@ -21,11 +21,11 @@ const Header = () => {
         </div>
 
 
-      <a href="#contact" className='scroll__down'>Scroll Down</a>
+        <a href="#contact" className='scroll__down'>Scroll Down</a>
 
       </div>
 
-     
+
 
 
     </header>
