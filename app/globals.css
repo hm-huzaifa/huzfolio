@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: var(--font-manrope), sans-serif;
+  --font-family-mono: var(--font-jetbrains-mono), monospace;
+  
+  --color-base: #050505;
+  --color-surface: #0f0f0f;
+  --color-subtle: #1a1a1a;
+  --color-accent: #d94e1e;
+  --color-accent-dim: #9a3412;
+  --color-text: #e5e5e5;
+  --color-muted: #737373;
+}
+
+:root {
+  --accent: #d94e1e;
+}
+
+body {
+  background-color: #050505;
+  color: #e5e5e5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d94e1e;
+}
+
+.glitch-effect:hover {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.3) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-25px, 25px) scale(0.8) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(20px, 30px) scale(1.1) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+    width: 0%;
+  }
+  50% {
+    transform: translateX(0%);
+    width: 70%;
+  }
+  100% {
+    transform: translateX(100%);
+    width: 30%;
+  }
+}
+
