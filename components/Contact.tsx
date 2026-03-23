@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
+import {PERSONAL_INFO} from "@/constants";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <footer className="bg-surface py-24 border-t border-neutral-900" id="contact">
+    <footer className="bg-surface/70 py-24 border-t border-neutral-900" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           
@@ -70,7 +71,7 @@ const Contact: React.FC = () => {
               href="mailto:mhuzaifa150@gmail.com"
               className="inline-flex items-center gap-4 text-2xl font-mono text-text hover:text-accent transition-colors border-b border-neutral-700 hover:border-accent pb-2"
             >
-              <Mail /> mhuzaifa150@gmail.com
+              <Mail /> {PERSONAL_INFO.email}
             </a>
           </div>
 

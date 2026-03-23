@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <section className="py-32 bg-surface" id="projects">
+      <section className="py-32 bg-surface/70" id="projects">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-text tracking-tight">SELECTED <br/> WORKS</h2>
@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                   </div>
                 )}
                 
-                <p className="text-muted mb-8 leading-relaxed">
+                <p className="text-muted mb-8 leading-relaxed whitespace-pre-line text-justify">
                   {project.description}
                 </p>
 

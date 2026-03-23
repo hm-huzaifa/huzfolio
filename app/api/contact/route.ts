@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {PERSONAL_INFO} from "@/constants";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -47,7 +48,7 @@ export async function POST(request: NextRequest) {
     const safeMessage = escapeHtml(message);
 
     const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
-    const toEmail = process.env.TO_EMAIL || 'mhuzaifa150@gmail.com';
+    const toEmail = process.env.TO_EMAIL || `${PERSONAL_INFO.email}`;
 
     const currentDate = new Date().toLocaleString('en-US', {
       weekday: 'long',

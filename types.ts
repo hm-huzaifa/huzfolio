@@ -17,7 +17,8 @@ export interface Job {
   role: string;
   period: string;
   location: string;
-  description: string;
+  /** Bullet points (plain text, no leading "•" required) */
+  description: string[];
 }
 
 export interface ChatMessage {

@@ -1,4 +1,4 @@
-import { SKILLS, RESUME_DATA } from '@/constants';
+import { SKILLS, PERSONAL_INFO } from '@/constants';
 
 const Skills: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Skills: React.FC = () => {
           <div>
             <h3 className="text-3xl font-bold mb-8 text-text">PHILOSOPHY</h3>
             <p className="text-muted text-lg leading-loose mb-8">
-              {RESUME_DATA.philosophy}
+              {PERSONAL_INFO.philosophy}
             </p>
           </div>
 

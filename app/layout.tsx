@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Manrope, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import LoadingScreen from '@/components/LoadingScreen';
+import { FloatingResumeButton } from '@/components/FloatingResumeButton';
+import { PERSONAL_INFO } from '@/constants';
 
 const manrope = Manrope({
     subsets: ['latin'],
@@ -18,8 +20,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Huzaifa | Software Engineer',
-    description: 'Senior Software Engineer portfolio',
+    title: `${PERSONAL_INFO.name.split(' ')[1]} | ${PERSONAL_INFO.role} Portfolio`,
+    description: 'Software Engineer portfolio',
 };
 
 export default function RootLayout({
@@ -32,6 +34,7 @@ export default function RootLayout({
         <body className={`${manrope.variable} ${jetbrainsMono.variable} bg-base min-h-screen text-text font-sans selection:bg-accent selection:text-white`}>
         <LoadingScreen />
         {children}
+        <FloatingResumeButton />
         </body>
         </html>
     );

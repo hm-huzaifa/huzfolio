@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
-import { RESUME_DATA } from '@/constants';
+import { PERSONAL_INFO } from '@/constants';
 
 type TextState = 'name' | 'name-deleting' | 'title' | 'title-deleting';
 
@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   const titleIndexRef = useRef(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const nameParts = RESUME_DATA.name.split(' ');
+  const nameParts = PERSONAL_INFO.name.split(' ');
   const nameLine1 = nameParts[0] || '';
   const nameLine2 = nameParts[1] || '';
   const titleLine1 = 'DIGITAL';
