@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import {PERSONAL_INFO} from "@/constants";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 function escapeHtml(text: string): string {
   const map: { [key: string]: string } = {
     '&': '&amp;',
@@ -42,6 +40,8 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
